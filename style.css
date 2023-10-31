@@ -93,6 +93,14 @@ form button[type="submit"]:hover {
   margin-bottom: 25px;
 }
 
+#taskList{
+  overflow-y: scroll;
+  height: 30vh;
+  scrollbar-color: rgb(56, 110, 56) rgba(41, 41, 41, 0.201);
+  scrollbar-width: thin;
+  padding-right: 10px;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -202,7 +210,7 @@ li {
 }
 
 #taskContainer ul li .complete:hover {
-  color: #1ad61a;
+  color: rgb(26, 214, 26);
   background-color: #ffffff;
   cursor: pointer;
 }
