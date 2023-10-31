@@ -1,15 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const taskForm = document.getElementById("taskForm");
-  const taskList = document.getElementById("taskList");
-  const filterDropdown = document.querySelector(".dropdown");
-  const filterOptions = document.getElementById("filterOptions");
-  const totalTasksSpan = document.getElementById("totalTasks");
-  const activeTasksSpan = document.getElementById("activeTasks");
-  const completedTasksSpan = document.getElementById("completedTasks");
-  const taskProgress = document.getElementById("taskProgress");
-  const deleteSelectedButton = document.getElementById("deleteSelected");
-  const deleteAllButton = document.getElementById("deleteAll");
-  const message = document.getElementById("message");
+  const taskForm              = document.getElementById("taskForm");
+  const taskList              = document.getElementById("taskList");
+  const filterDropdown        = document.querySelector(".dropdown");
+  const filterOptions         = document.getElementById("filterOptions");
+  const totalTasksSpan        = document.getElementById("totalTasks");
+  const activeTasksSpan       = document.getElementById("activeTasks");
+  const completedTasksSpan    = document.getElementById("completedTasks");
+  const taskProgress          = document.getElementById("taskProgress");
+  const deleteSelectedButton  = document.getElementById("deleteSelected");
+  const deleteAllButton       = document.getElementById("deleteAll");
 
   loadTasks();
 
