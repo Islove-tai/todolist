@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  border-width: 0;
+}
+
+body{
+  background-color: #00063b;
+}
+
+.appTitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: x-large;
+  padding-bottom: 10px;
+}
+
+button {
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+#taskForm input {
+  padding: 10px;
+  border-radius: 0.3em;
+  width: 100%;
+}
+
+#taskForm input:focus {
+  padding: 10px;
+  border-radius: 0.3em;
+  width: 100%;
+}
+
+
+.dropbtn {
+  padding: 0 10px;
+  color: white;
+  background: green;
+}
+
+form button{
+  margin-left: 5px;
+  padding: 0 10px;
+  color: white;
+  background: green;
+}
+
+form button[type="submit"]:hover {
+  color: yellow;
+  background: #fff;
+}
+
+#taskContainer {
+  min-width: 400px;
+
+  /* margin: 0 auto;  asstuce pour centrer horizontalement */
+
+  /* Alignement des elements interne en column */
+
+  background-image: linear-gradient(rgb(154, 241, 241), rgb(249, 167, 181));
+  border-radius: 10px;
+  padding: 20px;
+
+  /* cebtrage verticale et horozontal */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#taskActions,
+#taskForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+#deleteSelected,
+#deleteAll {
+  padding: 5px 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#taskActions {
+  margin-bottom: 25px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+.dropbtn {
+  padding: 5px 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#taskStatus {
+  display: flex;
+  justify-content: space-between;
+}
+
+#taskStatus p {
+  margin: 0 5px;
+}
+
+#taskStatus span {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.resume {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Chaque t@che */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border-width: 0;
+  border-radius: 15px;
+  margin: 5px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fded80;
+}
+
+.completed {
+  text-decoration: none;
+  background-color: #d7cf98;
+}
+
+.line-task {
+  text-decoration: line-through;
+}
+
+#taskContainer ul li span {
+  width: 100%;
+  text-align: left;
+}
+
+#taskContainer ul li button {
+  width: calc(2.5em + 10px);
+  height: 2.5em;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+
+#taskContainer ul li .complete {
+  background: #1ad61a;
+}
+
+#taskContainer ul li .delete {
+  background: #ff0707;
+}
+
+.complete {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#taskContainer ul li .complete:hover {
+  color: #1ad61a;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.delete {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#taskContainer ul li .delete:hover {
+  color: #fc0303;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+#message {
+  display: none;
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(98, 98, 98);
+}
+
+/* Style de base pour la barre de progression */
+#taskProgress {
+  width: 100%;
+  height: 10px;
+  margin: 0 0 10px 0;
+  background-color: rgba(128, 128, 128, 0.515);
+}
+
+/* Style pour le tooltip */
+ #taskProgressWrapper {
+    position: relative;
+}
+
+#progressTooltip {
+    display: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3em;
+    font-size: .8em;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Affichage du tooltip au survol de la barre de progression */
+#taskProgressWrapper:hover #progressTooltip {
+    display: block;
+    opacity: 1;
+}

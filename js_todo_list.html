@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="André, Junnior, Auréol, Lionel, Juvance, Monique, Zita, Lionel & Aimé(islove-tai) ">
+    <meta name="description" content="An online project aimed at refreshing the memory of HENSA students in HTML, CSS3, and JavaScript, supervised by Aimé TOSSOU, Analyst Programmer, and UX/UI Designer.">
+    <title>Projet: DEV WEB 200 Level - HENSA</title>
+
+
+    <!-- Les liens qui suivent sont pour le favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="js_todo_styles.css">
+    <script src="js_todo_script.js" defer></script>
+
+</head>
+<body>
+
+<div id="taskContainer">
+    <div class="appTitle">Liste de Tâches</div>
+    <form id="taskForm">
+        <input type="text" id="newTask" placeholder="📄 Ajouter une tâche ici...">
+        <button type="submit"><i class="bx bx-plus bx-sm"></i></button>
+    </form>
+    <br>
+
+    <div id="taskProgressWrapper">
+        <progress id="taskProgress" value="0" max="100"></progress>
+        <div id="progressTooltip">0%</div>
+    </div>
+    
+
+    <div id="taskActions">
+        <button id="deleteSelected">Delete Selected</button>
+        <button id="deleteAll">Delete All </button>
+    </div>
+
+    <ul id="taskList"></ul>
+    <div id="message">
+        <p>📃 Aucune tâche pour le moment.</p>
+        <p>Ajoutez une tâche à faire.</p>
+    </div>
+    <br>
+    
+    <div class="resume">
+            <div class="dropdown">
+                <button class="dropbtn">Filtre</button>
+                <div class="dropdown-content" id="filterOptions">
+                    <!-- les data-quelqueChose  -->
+                    <a href="#" data-filter="all">Tous</a>
+                    <a href="#" data-filter="active">En cours</a>
+                    <a href="#" data-filter="completed">Terminée.s</a>
+                </div>
+            </div>
+        
+        <div id="taskStatus">
+                <p>Total: <span id="totalTasks">0</span></p>
+                <p>En cours: <span id="activeTasks">0</span></p>
+                <p>Terminée.s: <span id="completedTasks">0</span></p>
+            </div>
+    </div>
+</div>
+</body>
+</html>
