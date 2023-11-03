@@ -95,7 +95,7 @@ form button[type="submit"]:hover {
 
 #taskList{
   overflow-y: scroll;
-  height: 30vh;
+  max-height: 30vh;
   scrollbar-color: rgb(56, 110, 56) rgba(41, 41, 41, 0.201);
   scrollbar-width: thin;
   padding-right: 10px;
